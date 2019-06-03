@@ -1,6 +1,6 @@
-# INDEC - MMUVRA
+# INDEC - SSDS
 
-The MMUVRA App uses React and Webpack with Hot Module Reload.
+The SSDS App uses React and Webpack with Hot Module Reload.
 
 ## setting environment
 Environment tools required to use this project:

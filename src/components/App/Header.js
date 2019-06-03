@@ -8,13 +8,11 @@ import {
 } from 'react-bootstrap';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {
-    faUser, faArrowsAlt, faAlignJustify, faPencilAlt,
-    faPowerOff, faExclamationTriangle, faUnlockAlt, faStickyNote, faSync
+    faUser, faPowerOff, faExclamationTriangle
 } from '@fortawesome/free-solid-svg-icons';
 import {includes, isEmpty} from 'lodash';
 import {TokenService} from '@indec/heimdall/client';
-import {Role} from '@indec/react-commons';
-import {roles} from '../../constants';
+import {appLabel, roles} from '../../constants';
 import {User} from '../../model';
 
 const logOut = () => {
@@ -40,7 +38,7 @@ const Header = ({profile, anErrorOccurred, history}) => {
                         <Navbar.Brand>
                             <NavItem onClick={() => redirect('/')}>
                                 <strong className="logo-header">
-                                    MMUVRA
+                                    {appLabel.APPNAME}
                                 </strong>
                             </NavItem>
                         </Navbar.Brand>
@@ -49,54 +47,10 @@ const Header = ({profile, anErrorOccurred, history}) => {
                     <Navbar.Collapse>
                         {!includes(profile.roles, roles.POLLSTER) && (
                             <Nav>
-                                <NavItem onClick={() => redirect('/users')}>
+                                <NavItem onClick={() => redirect('/some')}>
                                     <FontAwesomeIcon icon={faUser}/>
-                                    &nbsp;Usuarios
+                                    &nbsp;Some
                                 </NavItem>
-                                <Role
-                                    roles={[
-                                        roles.NATIONAL_COORDINATOR, roles.NATIONAL_COORDINATOR_RO
-                                    ]}
-                                    sessionRoles={profile.roles}
-                                >
-
-                                    <NavItem onClick={() => redirect('/unlock')}>
-                                        <FontAwesomeIcon icon={faUnlockAlt}/>
-                                        &nbsp;Apertura
-                                    </NavItem>
-                                </Role>
-                                <Role
-                                    roles={[roles.NATIONAL_COORDINATOR, roles.COORDINATOR, roles.SUB_COORDINATOR]}
-                                    sessionRoles={profile.roles}
-                                >
-                                    <NavItem onClick={() => redirect('/assign')}>
-                                        <FontAwesomeIcon icon={faArrowsAlt}/>
-                                    &nbsp;Asignaciones
-                                    </NavItem>
-                                </Role>
-                                <NavItem onClick={() => redirect('/fieldMaterials')} >
-                                    <FontAwesomeIcon icon={faAlignJustify}/>
-                                    &nbsp;Muestra
-                                </NavItem>
-                                <NavItem onClick={() => redirect('/monitoring')} >
-                                    <FontAwesomeIcon icon={faPencilAlt}/>
-                                    &nbsp;Monitoreo
-                                </NavItem>
-                                <NavItem onClick={() => redirect('/review')} >
-                                    <FontAwesomeIcon icon={faStickyNote}/>
-                                    &nbsp;Revisión
-                                </NavItem>
-                                <Role
-                                    roles={[
-                                        roles.NATIONAL_COORDINATOR, roles.NATIONAL_COORDINATOR_RO, roles.COORDINATOR
-                                    ]}
-                                    sessionRoles={profile.roles}
-                                >
-                                    <NavItem onClick={() => redirect('/logs')}>
-                                        <FontAwesomeIcon icon={faSync}/>
-                                        &nbsp;Sincronizaciones
-                                    </NavItem>
-                                </Role>
                             </Nav>
                         )}
                         <Nav pullRight>

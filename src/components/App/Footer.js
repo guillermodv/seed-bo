@@ -8,8 +8,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import {faIdCard} from '@fortawesome/free-solid-svg-icons';
 import {isEmpty} from 'lodash';
 
-
-import {getRoleName} from '../../constants';
+import {appLabel, getRoleName} from '../../constants';
 import logo from '../../images/logo-footer.png';
 import {User} from '../../model';
 
@@ -22,7 +21,7 @@ const Footer = ({profile}) => {
                         <Col sm={2} className="text-left">
                             <div className="text-small">
                                 <small className="texts">
-                                    MMUVRA
+                                    {appLabel.APPNAME}
                                 </small>
                             </div>
                             <div className="version">
@@ -69,7 +68,7 @@ const Footer = ({profile}) => {
                 <Row>
                     <Col sm={6}>
                         <span className="texts">
-                            Muestra Maestra Urbana de Viviendas de la Republica Argentina
+                            {appLabel.APPNAME}
                         </span>
                         <div className="version">
                             Version&nbsp;

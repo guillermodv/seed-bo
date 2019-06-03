@@ -10,6 +10,7 @@ import {Link} from 'react-router-dom';
 import {isEmpty} from 'lodash';
 import {User} from '../../model';
 import logo from '../../images/logo.png';
+import {appLabel} from '../../constants';
 
 function Welcome({profile}) {
     return (
@@ -22,14 +23,14 @@ function Welcome({profile}) {
             <Row>
                 <Col sm={12} className="text-center margin-top-splash">
                     <h3>
-                        Muestra Maestra Urbana de Viviendas de la Republica Argentina
+                        {appLabel.APPNAME}
                     </h3>
                 </Col>
             </Row>
             <Row>
                 <Col sm={12} className="text-center">
                     <h3>
-                        MMUVRA
+                        {appLabel.APPNAME}
                     </h3>
                 </Col>
             </Row>
