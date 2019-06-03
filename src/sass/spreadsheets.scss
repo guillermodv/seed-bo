@@ -1,0 +1,55 @@
+.table-width {
+  width: 95%;
+  border: 1px solid;
+}
+
+thead {
+  th {
+    height: 30px;
+  }
+}
+
+.column-md, .column-lg, .column-sm {
+  padding: 8px;
+  border: 1px solid;
+}
+
+.column-sm {
+  width: 2%;
+}
+
+.column-md {
+  width: 6%;
+}
+
+.column-lg {
+  width: 12%;
+}
+
+.data-align-top {
+  vertical-align: top;
+}
+
+.data-align-bottom {
+  vertical-align: bottom;
+}
+
+.empty {
+  height: 50px;
+}
+
+.empty-block {
+  height: 40px;
+}
+
+.description {
+  padding: 8px;
+}
+
+.table-header-bg {
+  background-color: #eee;
+}
+
+.page-break {
+  page-break-after: always;
+}

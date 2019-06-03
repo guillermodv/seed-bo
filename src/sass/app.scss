@@ -1,0 +1,131 @@
+@import "~@indec/react-address-commons/src/sass/dashboard";
+@import "~@indec/react-address-commons/src/sass/common";
+@import "~@indec/react-address-commons/src/sass/tables";
+
+@import "bootstrap/app";
+@import "common";
+@import "footer";
+@import "buttons";
+@import "form";
+@import "tables";
+@import "dropzone";
+@import "credentials";
+@import "review";
+@import "reports";
+@import "header";
+@import "popover";
+@import "toggle";
+@import "context-menu";
+@import "spreadsheets";
+
+// sass-lint:disable no-ids
+#root {
+  position: relative;
+  min-height: 100%;
+}
+
+.btn {
+  &:focus, &.focus, &:active:focus, &:active.focus {
+    outline: none;
+  }
+}
+
+main {
+  min-height: 100vh;
+  padding-top: 45px;
+  padding-bottom: 60px;
+  @media screen and (max-width: 768px) {
+    padding-bottom: 200px;
+  }
+}
+
+.loading {
+  margin-top: 20px;
+}
+
+select.max {
+  max-width: 300px;
+  padding: 6px 2px;
+}
+
+a {
+  color: $primary-color-text;
+  text-decoration: none;
+  cursor: pointer;
+  &:hover {
+    color: $primary-color-light;
+    text-decoration: none;
+  }
+}
+
+.fa-trash, .fa-exclamation-triangle {
+  color: #cf0000;
+}
+
+label {
+  display: inline;
+  font-weight: normal;
+}
+
+.row {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: inherit;
+  }
+}
+
+.pie-chart {
+  background-color: $primary-color-light;
+}
+
+.no-padding {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.dwelling-number {
+  margin-top: 20px;
+  border-left: solid 1px rgba(0, 0, 0, .4);
+}
+
+.vertical-margin {
+  margin: 20px 0;
+}
+
+.push-down {
+  margin-top: 9px;
+}
+
+.form-group {
+  margin: 0;
+}
+
+.alert {
+  padding: 6px;
+  margin: 0;
+}
+
+form.form-inline .form-group {
+  margin: 10px 30px 10px 0;
+}
+
+.margin-top-splash {
+  margin-top: 60px;
+}
+
+.modal-lg {
+  width: 96vw;
+}
+
+.fixed-side {
+  height: 50vh;
+  max-height: 50vh;
+  padding: 1px 3px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+}
