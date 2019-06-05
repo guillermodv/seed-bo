@@ -30,7 +30,7 @@ function Welcome({profile}) {
             <Row>
                 <Col sm={12} className="text-center">
                     <h3>
-                        {appLabel.APPNAME}
+                        {appLabel.APPDESCRIPTION}
                     </h3>
                 </Col>
             </Row>

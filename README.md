@@ -1,6 +1,6 @@
-# INDEC - SSDS
+# BO - SEED
 
-The SSDS App uses React and Webpack with Hot Module Reload.
+The BO-seed App uses React and Webpack with Hot Module Reload.
 
 ## setting environment
 Environment tools required to use this project:

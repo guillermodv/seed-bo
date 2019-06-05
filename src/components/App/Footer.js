@@ -21,7 +21,7 @@ const Footer = ({profile}) => {
                         <Col sm={2} className="text-left">
                             <div className="text-small">
                                 <small className="texts">
-                                    {appLabel.APPNAME}
+                                    {appLabel.APPDESCRIPTION}
                                 </small>
                             </div>
                             <div className="version">

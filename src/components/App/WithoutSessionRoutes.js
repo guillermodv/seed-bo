@@ -1,6 +1,6 @@
 import React, {Fragment} from 'react';
 import {HashRouter, Route, Switch} from 'react-router-dom';
-import {SignIn} from '@indec/react-address-commons';
+import SignIn from '../../components/SignIn';
 
 import Footer from './Footer';
 import Welcome from './Welcome';
